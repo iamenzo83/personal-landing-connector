@@ -1,0 +1,109 @@
+
+import { motion } from 'framer-motion';
+
+type Experience = {
+  period: string;
+  company: string;
+  position: string;
+  description: string;
+};
+
+const experiences: Experience[] = [
+  {
+    period: "2021 - Presente",
+    company: "Freelance",
+    position: "Full Stack Developer",
+    description: "Progettazione e sviluppo di soluzioni web personalizzate, applicazioni mobile e consulenza tecnica per vari clienti."
+  },
+  {
+    period: "2018 - 2021",
+    company: "Spindox",
+    position: "Senior Web Developer",
+    description: "Sviluppo full-stack di applicazioni web, sistemi gestionali e piattaforme enterprise per clienti di alto profilo."
+  },
+  {
+    period: "2015 - 2018",
+    company: "Kme.digital",
+    position: "Web Developer",
+    description: "Sviluppo di siti web, e-commerce e piattaforme digitali innovative con focus sulla user experience."
+  },
+  {
+    period: "2012 - 2015",
+    company: "Adnkronos",
+    position: "Digital Content Developer",
+    description: "Gestione contenuti digitali, sviluppo web e implementazione di soluzioni per il settore media."
+  }
+];
+
+const ExperienceSection = () => {
+  return (
+    <section id="experience" className="py-24 px-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <motion.span
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full"
+          >
+            Percorso professionale
+          </motion.span>
+          
+          <motion.h2 
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-3xl md:text-4xl font-bold mt-4 mb-6"
+          >
+            Esperienza lavorativa
+          </motion.h2>
+          
+          <motion.p
+            initial={{ opacity: 0, y: -10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-lg text-foreground/70 max-w-2xl mx-auto"
+          >
+            Un percorso di crescita attraverso diversi ruoli e responsabilità nel mondo dello sviluppo software.
+          </motion.p>
+        </div>
+        
+        <div className="relative">
+          {/* Timeline line */}
+          <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-border"></div>
+          
+          <div className="space-y-12">
+            {experiences.map((exp, index) => (
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className={`relative flex flex-col md:flex-row items-center ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
+              >
+                <div className="flex items-center justify-center w-10 h-10 rounded-full bg-white border border-primary shadow-md absolute left-0 md:left-1/2 transform md:-translate-x-1/2 z-10">
+                  <div className="w-3 h-3 rounded-full bg-primary"></div>
+                </div>
+                
+                <div className={`w-full md:w-[calc(50%-2rem)] ${index % 2 === 0 ? 'md:pr-0 md:pl-8 text-left' : 'md:pl-0 md:pr-8 md:text-right'} ml-12 md:ml-0`}>
+                  <div className="bg-white rounded-2xl shadow-sm border border-border/40 p-6 hover:shadow-md transition-apple">
+                    <span className="inline-block text-sm font-medium text-primary/80 mb-2">{exp.period}</span>
+                    <h3 className="text-xl font-semibold">{exp.company}</h3>
+                    <h4 className="text-foreground/70 mb-3">{exp.position}</h4>
+                    <p className="text-foreground/80">{exp.description}</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ExperienceSection;
