@@ -22,7 +22,7 @@ const ProfileSection = () => {
         
         <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-2xl mb-8">
           Professionista IT con esperienza nella gestione di sistemi informativi e automazione industriale.
-          Specializzato in soluzioni tecnologiche, sistemi di visione e programmazione CNC.
+          Specializzato in soluzioni tecnologiche e sistemi di visione.
         </p>
         
         <div className="inline-flex gap-5 mt-2">

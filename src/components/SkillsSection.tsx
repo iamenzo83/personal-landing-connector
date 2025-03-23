@@ -8,20 +8,20 @@ type Skill = {
 
 const skills: Skill[] = [
   {
-    category: "Linguaggi",
-    items: ["PHP", "Javascript", "Typescript", "HTML", "CSS", "Python"]
+    category: "IT Management",
+    items: ["Gestione Sistemi Informativi", "Project Management", "Cyber Security", "Budget Planning", "Networking", "Team Leadership"]
   },
   {
-    category: "Framework & CMS",
-    items: ["Laravel", "Symfony", "Vue.js", "React", "Node.js", "WordPress"]
+    category: "Tecnologie",
+    items: ["Windows Server", "Linux Server", "Active Directory", "VPN", "Firewall", "Cloud Services"]
   },
   {
-    category: "DevOps & Tools",
-    items: ["Docker", "Git", "CI/CD", "AWS", "Linux", "Bash"]
+    category: "Sistemi Industriali",
+    items: ["Sistemi di Visione", "Troubleshooting", "Revamping", "Automazione", "Visual Inspection", "Monitoraggio Sistemi"]
   },
   {
-    category: "Database",
-    items: ["MySQL", "PostgreSQL", "MongoDB", "Redis", "Elasticsearch"]
+    category: "Altri Skills",
+    items: ["Gestione Fornitori", "Formazione Tecnica", "Documentazione", "Analisi Requisiti", "Ottimizzazione Processi", "Consulenza IT"]
   }
 ];
 

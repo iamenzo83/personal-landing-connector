@@ -22,16 +22,16 @@ const experiences: Experience[] = [
     description: "Conduzione sistemi di visione delle macchine di produzione, troubleshooting e collaborazione nello sviluppo di revamping su sistemi di visual inspection."
   },
   {
-    period: "2015 - Presente",
-    company: "Texol Srl, Alanno Scalo",
-    position: "CNC Programmer Specialist",
-    description: "Programmazione linguaggio ISO per centri di lavoro CNC a 3/4 assi, ottimizzazione ciclo produttivo, formazione e gestione fornitori."
-  },
-  {
     period: "2010 - 2014",
     company: "Mecnova Srl, Alanno Scalo",
     position: "System Manager",
     description: "Gestione Windows Server, Linux Server, configurazione Proxy, firewall, VPN, gestione infrastruttura di rete e sistemi di autenticazione centralizzati."
+  },
+  {
+    period: "2008 - 2009",
+    company: "Comitato Organizzatore XVI Giochi del Mediterraneo - Pescara2009, Pescara",
+    position: "System Manager",
+    description: "Gestione di server Windows, coordinamento installazione di reti, supporto tecnico per eventi sportivi e configurazione di sistemi di sicurezza."
   }
 ];
 
