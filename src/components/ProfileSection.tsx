@@ -12,7 +12,7 @@ const ProfileSection = () => {
       >
         <div className="inline-block mb-4">
           <span className="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full">
-            Full Stack Developer
+            IT Manager
           </span>
         </div>
         
@@ -21,8 +21,8 @@ const ProfileSection = () => {
         </h1>
         
         <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-2xl mb-8">
-          Sviluppatore a tutto tondo con passione per l'innovazione e il design. 
-          Trasformo le idee complesse in soluzioni digitali eleganti e funzionali.
+          Professionista IT con esperienza nella gestione di sistemi informativi e automazione industriale.
+          Specializzato in soluzioni tecnologiche, sistemi di visione e programmazione CNC.
         </p>
         
         <div className="inline-flex gap-5 mt-2">

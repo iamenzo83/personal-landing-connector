@@ -10,28 +10,28 @@ type Experience = {
 
 const experiences: Experience[] = [
   {
-    period: "2021 - Presente",
-    company: "Freelance",
-    position: "Full Stack Developer",
-    description: "Progettazione e sviluppo di soluzioni web personalizzate, applicazioni mobile e consulenza tecnica per vari clienti."
+    period: "2014 - Presente",
+    company: "Texol Srl, Alanno Scalo",
+    position: "IT Manager",
+    description: "Responsabile servizi IT, manutenzione e gestione sistemi informativi, consulenza soluzioni software, gestione team, coordinamento fornitori, sviluppo progetti IT, cyber security e collaborazione con il management."
   },
   {
-    period: "2018 - 2021",
-    company: "Spindox",
-    position: "Senior Web Developer",
-    description: "Sviluppo full-stack di applicazioni web, sistemi gestionali e piattaforme enterprise per clienti di alto profilo."
+    period: "2015 - Presente",
+    company: "Texol Srl, Alanno Scalo",
+    position: "Vision System Expert",
+    description: "Conduzione sistemi di visione delle macchine di produzione, troubleshooting e collaborazione nello sviluppo di revamping su sistemi di visual inspection."
   },
   {
-    period: "2015 - 2018",
-    company: "Kme.digital",
-    position: "Web Developer",
-    description: "Sviluppo di siti web, e-commerce e piattaforme digitali innovative con focus sulla user experience."
+    period: "2015 - Presente",
+    company: "Texol Srl, Alanno Scalo",
+    position: "CNC Programmer Specialist",
+    description: "Programmazione linguaggio ISO per centri di lavoro CNC a 3/4 assi, ottimizzazione ciclo produttivo, formazione e gestione fornitori."
   },
   {
-    period: "2012 - 2015",
-    company: "Adnkronos",
-    position: "Digital Content Developer",
-    description: "Gestione contenuti digitali, sviluppo web e implementazione di soluzioni per il settore media."
+    period: "2010 - 2014",
+    company: "Mecnova Srl, Alanno Scalo",
+    position: "System Manager",
+    description: "Gestione Windows Server, Linux Server, configurazione Proxy, firewall, VPN, gestione infrastruttura di rete e sistemi di autenticazione centralizzati."
   }
 ];
 
@@ -67,7 +67,7 @@ const ExperienceSection = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg text-foreground/70 max-w-2xl mx-auto"
           >
-            Un percorso di crescita attraverso diversi ruoli e responsabilità nel mondo dello sviluppo software.
+            Un percorso di crescita attraverso diversi ruoli nel campo dell'IT management e dell'automazione industriale.
           </motion.p>
         </div>
         
