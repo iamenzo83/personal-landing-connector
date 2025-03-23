@@ -16,12 +16,6 @@ const experiences: Experience[] = [
     description: "Responsabile servizi IT, manutenzione e gestione sistemi informativi, consulenza soluzioni software, gestione team, coordinamento fornitori, sviluppo progetti IT, cyber security e collaborazione con il management."
   },
   {
-    period: "2015 - Presente",
-    company: "Texol Srl, Alanno Scalo",
-    position: "Vision System Expert",
-    description: "Conduzione sistemi di visione delle macchine di produzione, troubleshooting e collaborazione nello sviluppo di revamping su sistemi di visual inspection."
-  },
-  {
     period: "2010 - 2014",
     company: "Mecnova Srl, Alanno Scalo",
     position: "System Manager",
@@ -32,6 +26,12 @@ const experiences: Experience[] = [
     company: "Comitato Organizzatore XVI Giochi del Mediterraneo - Pescara2009, Pescara",
     position: "System Manager",
     description: "Gestione di server Windows, coordinamento installazione di reti, supporto tecnico per eventi sportivi e configurazione di sistemi di sicurezza."
+  },
+  {
+    period: "2005 - 2008",
+    company: "Cyborg Srl, Chieti Scalo",
+    position: "System Manager",
+    description: "Amministrazione firewall Checkpoint R60, gestione connessioni VPN site-to-site su oltre 30 siti, configurazione NAT per hosting e posta, monitoraggio servizi e gestione CED per clienti istituzionali e aziende."
   }
 ];
 
