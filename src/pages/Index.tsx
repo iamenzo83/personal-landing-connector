@@ -69,8 +69,24 @@ const Index = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="text-lg text-foreground/70 max-w-2xl mx-auto mb-10"
               >
-                Hai un'idea o un progetto in mente? Contattami attraverso uno dei canali qui sotto.
+                Hai bisogno di supporto IT, consulenza per l'implementazione di soluzioni tecnologiche o assistenza con sistemi di sicurezza informatica? 
+                Contattami per discutere del tuo progetto e scoprire come posso aiutarti a ottimizzare i tuoi sistemi informativi.
               </motion.p>
+              
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="flex flex-wrap justify-center gap-4 mb-12"
+              >
+                <div className="px-4 py-2 bg-secondary/50 rounded-full text-sm">IT Management</div>
+                <div className="px-4 py-2 bg-secondary/50 rounded-full text-sm">Sistemi Informativi</div>
+                <div className="px-4 py-2 bg-secondary/50 rounded-full text-sm">Cyber Security</div>
+                <div className="px-4 py-2 bg-secondary/50 rounded-full text-sm">Automazione Industriale</div>
+                <div className="px-4 py-2 bg-secondary/50 rounded-full text-sm">Sistemi di Visione</div>
+                <div className="px-4 py-2 bg-secondary/50 rounded-full text-sm">Troubleshooting</div>
+              </motion.div>
             </div>
             
             <motion.div 

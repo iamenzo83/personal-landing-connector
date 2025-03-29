@@ -1,6 +1,7 @@
 
 import { Mail, MessageCircle, Send } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
 
 type ContactButtonProps = {
   type: 'mail' | 'telegram' | 'whatsapp';
@@ -9,6 +10,8 @@ type ContactButtonProps = {
 };
 
 const ContactButton = ({ type, href, className }: ContactButtonProps) => {
+  const [showTooltip, setShowTooltip] = useState(false);
+  
   const getIcon = () => {
     switch (type) {
       case 'mail':
@@ -42,20 +45,32 @@ const ContactButton = ({ type, href, className }: ContactButtonProps) => {
     }
   };
   
+  const handleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.open(href, '_blank', 'noopener,noreferrer');
+    setShowTooltip(true);
+    setTimeout(() => setShowTooltip(false), 2000);
+  };
+  
   return (
-    <a 
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={cn(
-        "inline-flex items-center gap-2 px-5 py-3 rounded-full border transition-apple",
-        getStyles(),
-        className
+    <div className="relative">
+      <button 
+        onClick={handleClick}
+        className={cn(
+          "inline-flex items-center gap-2 px-5 py-3 rounded-full border transition-apple",
+          getStyles(),
+          className
+        )}
+      >
+        {getIcon()}
+        <span className="font-medium">{getLabel()}</span>
+      </button>
+      {showTooltip && (
+        <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 -translate-y-2 px-3 py-1 bg-foreground text-background text-xs rounded-md shadow-lg mb-1 whitespace-nowrap">
+          Contatto aperto in una nuova finestra
+        </div>
       )}
-    >
-      {getIcon()}
-      <span className="font-medium">{getLabel()}</span>
-    </a>
+    </div>
   );
 };
 
