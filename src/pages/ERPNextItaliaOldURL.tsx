@@ -7,8 +7,12 @@ const ERPNextItaliaOldURL = () => {
   const navigate = useNavigate();
   
   useEffect(() => {
-    // Redirect to the new URL
-    navigate("/erp/erpnext-italia", { replace: true });
+    // Redirect to the new URL with a small delay to ensure Helmet has time to apply
+    const timeout = setTimeout(() => {
+      navigate("/erp/erpnext-italia", { replace: true });
+    }, 100);
+    
+    return () => clearTimeout(timeout);
   }, [navigate]);
   
   return (
