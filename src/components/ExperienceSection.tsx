@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 
 type Experience = {
@@ -72,7 +71,6 @@ const ExperienceSection = () => {
         </div>
         
         <div className="relative">
-          {/* Timeline line */}
           <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-border"></div>
           
           <div className="space-y-12">
@@ -90,7 +88,7 @@ const ExperienceSection = () => {
                 </div>
                 
                 <div className={`w-full md:w-[calc(50%-2rem)] ${index % 2 === 0 ? 'md:pr-0 md:pl-8 text-left' : 'md:pl-0 md:pr-8 md:text-right'} ml-12 md:ml-0`}>
-                  <div className="bg-white rounded-2xl shadow-sm border border-border/40 p-6 hover:shadow-md transition-apple">
+                  <div className="bg-white dark:bg-secondary/20 rounded-2xl shadow-sm border border-border/40 p-6 hover:shadow-md transition-apple">
                     <span className="inline-block text-sm font-medium text-primary/80 mb-2">{exp.period}</span>
                     <h3 className="text-xl font-semibold">{exp.company}</h3>
                     <h4 className="text-foreground/70 mb-3">{exp.position}</h4>

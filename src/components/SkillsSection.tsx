@@ -92,7 +92,7 @@ const SkillsSection = () => {
             <motion.div 
               key={index}
               variants={itemVariants}
-              className="bg-white rounded-2xl shadow-sm border border-border/40 overflow-hidden hover:shadow-md transition-apple"
+              className="bg-white dark:bg-secondary/20 rounded-2xl shadow-sm border border-border/40 overflow-hidden hover:shadow-md transition-apple"
             >
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-4">{skillGroup.category}</h3>
