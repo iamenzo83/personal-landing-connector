@@ -22,6 +22,12 @@ const Header = () => {
     window.scrollTo(0, document.getElementById('contact')?.offsetTop || 0);
   };
 
+  const handleHomeClick = (e) => {
+    e.preventDefault();
+    navigate('/');
+    window.scrollTo(0, 0);
+  };
+
   return (
     <header 
       className={cn(
@@ -31,9 +37,13 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="animate-fade-in-down">
-          <Link to="/" className="text-lg font-medium tracking-tight opacity-90 hover:opacity-100 transition-apple">
+          <a 
+            href="/"
+            onClick={handleHomeClick}
+            className="text-lg font-medium tracking-tight opacity-90 hover:opacity-100 transition-apple"
+          >
             Enzo Carlettini
-          </Link>
+          </a>
         </div>
         
         <div className="animate-fade-in-down">
