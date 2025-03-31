@@ -1,7 +1,8 @@
 
 import { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils";
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { ThemeToggle } from './ThemeToggle';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -46,7 +47,9 @@ const Header = () => {
           </a>
         </div>
         
-        <div className="animate-fade-in-down">
+        <div className="flex items-center space-x-4 animate-fade-in-down">
+          <ThemeToggle />
+          
           <button 
             onClick={handleContactClick}
             className="text-sm font-medium py-2 px-4 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-apple"

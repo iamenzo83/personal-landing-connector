@@ -110,7 +110,7 @@
   }
   
   .blur-backdrop {
-    @apply bg-white/80 backdrop-blur-md border border-white/20;
+    @apply bg-white/80 backdrop-blur-md border border-white/20 dark:bg-black/40 dark:border-white/10;
   }
   
   .section-spacing {
@@ -118,11 +118,11 @@
   }
 
   .glass-button {
-    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-sm hover:bg-white/20 transition-apple;
+    @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-sm hover:bg-white/20 transition-apple dark:bg-black/30 dark:border-white/10;
   }
   
   .glass-card {
-    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-sm transition-apple hover:bg-white/10;
+    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-sm transition-apple hover:bg-white/10 dark:bg-black/20;
   }
   
   .animated-gradient {
