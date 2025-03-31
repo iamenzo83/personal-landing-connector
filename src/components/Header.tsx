@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -31,9 +31,9 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="animate-fade-in-down">
-          <h1 className="text-lg font-medium tracking-tight opacity-90">
+          <Link to="/" className="text-lg font-medium tracking-tight opacity-90 hover:opacity-100 transition-apple">
             Enzo Carlettini
-          </h1>
+          </Link>
         </div>
         
         <div className="animate-fade-in-down">
