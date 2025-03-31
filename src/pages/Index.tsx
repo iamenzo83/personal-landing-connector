@@ -6,6 +6,7 @@ import ProfileSection from "@/components/ProfileSection";
 import SkillsSection from "@/components/SkillsSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import ContactButton from "@/components/ContactButton";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   useEffect(() => {
@@ -38,6 +39,49 @@ const Index = () => {
         <ProfileSection />
         <SkillsSection />
         <ExperienceSection />
+        
+        {/* ERPNext Italia Section */}
+        <section className="py-20 px-6 bg-gradient-to-b from-background/50 to-primary/5">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="text-center mb-12"
+            >
+              <span className="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full">
+                Open Source ERP
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-6">
+                ERPNext Italia
+              </h2>
+              <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
+                Dal 2013 mi occupo dell'implementazione di ERPNext per il mercato italiano, 
+                con particolare attenzione agli aspetti fiscali e normativi specifici.
+              </p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="flex justify-center"
+            >
+              <Link
+                to="/erp/erpnext-italia"
+                className="px-6 py-3 bg-primary text-white font-medium rounded-full shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-apple inline-flex items-center gap-2"
+              >
+                Scopri di più su ERPNext Italia
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </Link>
+            </motion.div>
+          </div>
+        </section>
         
         <section id="contact" className="py-24 px-6 bg-gradient-to-b from-background to-secondary/30">
           <div className="max-w-7xl mx-auto">
