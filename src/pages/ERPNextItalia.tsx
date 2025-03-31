@@ -1,10 +1,25 @@
 
 import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 
 const ERPNextItalia = () => {
   return (
     <div className="bg-background min-h-screen overflow-hidden">
+      <Helmet>
+        <title>ERPNext Italia - Implementazione e Consulenza | Enzo Carlettini</title>
+        <meta name="description" content="Dal 2013 mi occupo dell'implementazione di ERPNext per il mercato italiano, con particolare attenzione agli aspetti fiscali e normativi specifici. Consulenza e supporto per ERPNext in Italia." />
+        <meta name="keywords" content="ERPNext, ERPNext Italia, Consulenza ERPNext, ERP Open Source, Gestionale Open Source, Fatturazione Elettronica, ERPNext Italiano" />
+        <link rel="canonical" href="https://carlettini.org/erp/erpnext-italia" />
+        <meta property="og:title" content="ERPNext Italia - Implementazione e Consulenza | Enzo Carlettini" />
+        <meta property="og:description" content="Dal 2013 mi occupo dell'implementazione di ERPNext per il mercato italiano, con particolare attenzione agli aspetti fiscali e normativi specifici." />
+        <meta property="og:url" content="https://carlettini.org/erp/erpnext-italia" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="ERPNext Italia - Implementazione e Consulenza | Enzo Carlettini" />
+        <meta name="twitter:description" content="Dal 2013 mi occupo dell'implementazione di ERPNext per il mercato italiano, con particolare attenzione agli aspetti fiscali e normativi specifici." />
+      </Helmet>
+      
       <Header />
       
       <main className="pt-20 px-6">

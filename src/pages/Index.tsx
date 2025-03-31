@@ -1,6 +1,8 @@
+
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import ProfileSection from "@/components/ProfileSection";
 import SkillsSection from "@/components/SkillsSection";
@@ -39,6 +41,20 @@ const Index = () => {
 
   return (
     <div className="bg-background min-h-screen overflow-hidden">
+      <Helmet>
+        <title>Enzo Carlettini - IT Management, ERPNext Italia & Cybersecurity</title>
+        <meta name="description" content="Esperto IT Management, implementazione ERPNext Italia, Cybersecurity e Automazione Industriale. Consulenza personalizzata per sistemi informativi e gestionali." />
+        <meta name="keywords" content="IT Management, ERPNext Italia, Cybersecurity, Automazione Industriale, Consulenza IT, Sistemi Informativi" />
+        <link rel="canonical" href="https://carlettini.org/" />
+        <meta property="og:title" content="Enzo Carlettini - IT Management, ERPNext Italia & Cybersecurity" />
+        <meta property="og:description" content="Esperto IT Management, implementazione ERPNext Italia, Cybersecurity e Automazione Industriale. Consulenza personalizzata per sistemi informativi e gestionali." />
+        <meta property="og:url" content="https://carlettini.org/" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Enzo Carlettini - IT Management, ERPNext Italia & Cybersecurity" />
+        <meta name="twitter:description" content="Esperto IT Management, implementazione ERPNext Italia, Cybersecurity e Automazione Industriale. Consulenza personalizzata per sistemi informativi e gestionali." />
+      </Helmet>
+      
       <Header />
       
       <main>
