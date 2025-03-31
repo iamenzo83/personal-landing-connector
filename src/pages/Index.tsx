@@ -1,14 +1,15 @@
-
 import { useEffect } from "react";
 import { motion } from "framer-motion";
+import { Link, useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import ProfileSection from "@/components/ProfileSection";
 import SkillsSection from "@/components/SkillsSection";
 import ExperienceSection from "@/components/ExperienceSection";
 import ContactButton from "@/components/ContactButton";
-import { Link } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     // Apply smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -30,6 +31,11 @@ const Index = () => {
       });
     };
   }, []);
+
+  const handleERPNextNavigation = () => {
+    navigate("/erp/erpnext-italia");
+    window.scrollTo(0, 0);
+  };
 
   return (
     <div className="bg-background min-h-screen overflow-hidden">
@@ -69,8 +75,8 @@ const Index = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="flex justify-center"
             >
-              <Link
-                to="/erp/erpnext-italia"
+              <button
+                onClick={handleERPNextNavigation}
                 className="px-6 py-3 bg-primary text-white font-medium rounded-full shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-apple inline-flex items-center gap-2"
               >
                 Scopri di più su ERPNext Italia
@@ -78,7 +84,7 @@ const Index = () => {
                   <path d="M5 12h14"></path>
                   <path d="m12 5 7 7-7 7"></path>
                 </svg>
-              </Link>
+              </button>
             </motion.div>
           </div>
         </section>

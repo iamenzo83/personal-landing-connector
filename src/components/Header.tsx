@@ -1,9 +1,11 @@
 
 import { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils";
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
   
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +16,11 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleContactClick = () => {
+    navigate('/#contact');
+    window.scrollTo(0, document.getElementById('contact')?.offsetTop || 0);
+  };
 
   return (
     <header 
@@ -30,12 +37,12 @@ const Header = () => {
         </div>
         
         <div className="animate-fade-in-down">
-          <a 
-            href="#contact" 
+          <button 
+            onClick={handleContactClick}
             className="text-sm font-medium py-2 px-4 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-apple"
           >
             Contattami
-          </a>
+          </button>
         </div>
       </div>
     </header>
