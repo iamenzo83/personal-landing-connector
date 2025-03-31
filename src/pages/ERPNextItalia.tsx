@@ -28,7 +28,7 @@ const ERPNextItalia = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-white/50 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-secondary/20"
+            className="bg-white/50 dark:bg-secondary/20 backdrop-blur-sm rounded-2xl shadow-lg p-8 border border-secondary/20"
           >
             <div className="mb-6">
               <span className="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full">
