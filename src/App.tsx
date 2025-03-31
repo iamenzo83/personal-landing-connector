@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import ERPNextItalia from "./pages/ERPNextItalia";
 import NotFound from "./pages/NotFound";
 import OldERPNextRedirect from "./pages/OldERPNextRedirect";
+import ERPNextItaliaOldURL from "./pages/ERPNextItaliaOldURL";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,11 @@ const App = () => (
           <Route path="/erp/erpnext-italia" element={<ERPNextItalia />} />
           
           {/* Redirect from old URLs to new SEO-friendly URLs */}
+          <Route path="/2013/08/erpnext-italia" element={<ERPNextItaliaOldURL />} />
+          <Route path="/2013/08/erpnext-italia/" element={<ERPNextItaliaOldURL />} />
+          <Route path="/2013/08/erpnext-italia/index.html" element={<ERPNextItaliaOldURL />} />
+          
+          {/* Legacy redirects */}
           <Route path="/2013/08/erpnext-italia" element={<OldERPNextRedirect />} />
           <Route path="/2013/08/erpnext-italia/" element={<OldERPNextRedirect />} />
           
