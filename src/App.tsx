@@ -7,7 +7,6 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import ERPNextItalia from "./pages/ERPNextItalia";
 import NotFound from "./pages/NotFound";
-import OldERPNextRedirect from "./pages/OldERPNextRedirect";
 import ERPNextItaliaOldURL from "./pages/ERPNextItaliaOldURL";
 
 const queryClient = new QueryClient();
@@ -26,10 +25,6 @@ const App = () => (
           <Route path="/2013/08/erpnext-italia" element={<ERPNextItaliaOldURL />} />
           <Route path="/2013/08/erpnext-italia/" element={<ERPNextItaliaOldURL />} />
           <Route path="/2013/08/erpnext-italia/index.html" element={<ERPNextItaliaOldURL />} />
-          
-          {/* Legacy redirects */}
-          <Route path="/2013/08/erpnext-italia" element={<OldERPNextRedirect />} />
-          <Route path="/2013/08/erpnext-italia/" element={<OldERPNextRedirect />} />
           
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
