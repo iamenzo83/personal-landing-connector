@@ -27,8 +27,14 @@ const ProfileSection = () => {
         
         <div className="inline-flex gap-5 mt-2">
           <a 
-            href="#skills" 
+            href="#contact" 
             className="px-6 py-3 bg-primary text-white font-medium rounded-full shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-apple"
+          >
+            Contattami
+          </a>
+          <a 
+            href="#skills" 
+            className="px-6 py-3 bg-secondary text-foreground font-medium rounded-full hover:bg-secondary/80 transition-apple"
           >
             Le mie competenze
           </a>

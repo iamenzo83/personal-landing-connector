@@ -1,10 +1,10 @@
 
-import { Mail, MessageCircle, Send } from "lucide-react";
+import { Linkedin, Mail, MessageCircle, Send } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
 
 type ContactButtonProps = {
-  type: 'mail' | 'telegram' | 'whatsapp';
+  type: 'mail' | 'telegram' | 'whatsapp' | 'linkedin';
   href: string;
   className?: string;
 };
@@ -20,6 +20,8 @@ const ContactButton = ({ type, href, className }: ContactButtonProps) => {
         return <Send className="h-5 w-5" />;
       case 'whatsapp':
         return <MessageCircle className="h-5 w-5" />;
+      case 'linkedin':
+        return <Linkedin className="h-5 w-5" />;
     }
   };
   
@@ -31,6 +33,8 @@ const ContactButton = ({ type, href, className }: ContactButtonProps) => {
         return 'Telegram';
       case 'whatsapp':
         return 'WhatsApp';
+      case 'linkedin':
+        return 'LinkedIn';
     }
   };
   
@@ -42,6 +46,8 @@ const ContactButton = ({ type, href, className }: ContactButtonProps) => {
         return "bg-sky-50 text-sky-600 hover:bg-sky-100 border-sky-200";
       case 'whatsapp':
         return "bg-green-50 text-green-600 hover:bg-green-100 border-green-200";
+      case 'linkedin':
+        return "bg-indigo-50 text-indigo-600 hover:bg-indigo-100 border-indigo-200";
     }
   };
   

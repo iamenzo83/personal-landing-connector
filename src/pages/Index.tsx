@@ -177,6 +177,11 @@ const Index = () => {
                 href="https://wa.me/393272408379" 
                 className="w-full sm:w-auto"
               />
+              <ContactButton 
+                type="linkedin" 
+                href="https://www.linkedin.com/in/enzocarlettini/" 
+                className="w-full sm:w-auto"
+              />
             </motion.div>
           </div>
         </section>
