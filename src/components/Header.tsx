@@ -75,16 +75,18 @@ const Header = () => {
             >
               Esperienze
             </a>
+            
+            <button 
+              onClick={handleContactClick}
+              className="text-sm font-medium py-2 px-4 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-apple"
+            >
+              Contattami
+            </button>
           </nav>
           
-          <ThemeToggle />
-          
-          <button 
-            onClick={handleContactClick}
-            className="text-sm font-medium py-2 px-4 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-apple"
-          >
-            Contattami
-          </button>
+          <div className="ml-auto">
+            <ThemeToggle />
+          </div>
         </div>
       </div>
     </header>
