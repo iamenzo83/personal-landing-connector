@@ -32,18 +32,6 @@ const ProfileSection = () => {
           >
             Contattami
           </a>
-          <a 
-            href="#skills" 
-            className="px-6 py-3 bg-secondary text-foreground font-medium rounded-full hover:bg-secondary/80 transition-apple"
-          >
-            Le mie competenze
-          </a>
-          <a 
-            href="#experience" 
-            className="px-6 py-3 bg-secondary text-foreground font-medium rounded-full hover:bg-secondary/80 transition-apple"
-          >
-            Esperienze
-          </a>
         </div>
       </motion.div>
       

@@ -29,6 +29,18 @@ const Header = () => {
     window.scrollTo(0, 0);
   };
 
+  const handleSkillsClick = (e) => {
+    e.preventDefault();
+    navigate('/#skills');
+    window.scrollTo(0, document.getElementById('skills')?.offsetTop || 0);
+  };
+
+  const handleExperienceClick = (e) => {
+    e.preventDefault();
+    navigate('/#experience');
+    window.scrollTo(0, document.getElementById('experience')?.offsetTop || 0);
+  };
+
   return (
     <header 
       className={cn(
@@ -48,6 +60,23 @@ const Header = () => {
         </div>
         
         <div className="flex items-center space-x-4 animate-fade-in-down">
+          <nav className="hidden md:flex items-center space-x-4 mr-4">
+            <a 
+              href="/#skills" 
+              onClick={handleSkillsClick}
+              className="text-sm font-medium py-2 px-3 rounded-full hover:bg-accent/50 transition-apple"
+            >
+              Le mie competenze
+            </a>
+            <a 
+              href="/#experience" 
+              onClick={handleExperienceClick}
+              className="text-sm font-medium py-2 px-3 rounded-full hover:bg-accent/50 transition-apple"
+            >
+              Esperienze
+            </a>
+          </nav>
+          
           <ThemeToggle />
           
           <button 
