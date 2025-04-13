@@ -30,6 +30,9 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Create CNAME file
+        run: echo "www.carlettini.org" > ./dist/CNAME
+
       - name: Create 404.html (for GitHub Pages SPA routing)
         run: cp dist/index.html dist/404.html
 
