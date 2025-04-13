@@ -8,7 +8,7 @@ const ProfileSection = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
-        className="md:w-1/2 md:pr-12 mb-12 md:mb-0 text-center md:text-left"
+        className="md:w-1/2 lg:w-2/5 md:pr-12 mb-12 md:mb-0 text-center md:text-left"
       >
         <div className="inline-block mb-4">
           <span className="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full">
@@ -16,11 +16,11 @@ const ProfileSection = () => {
           </span>
         </div>
         
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight mb-6">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-bold tracking-tight mb-6">
           Enzo Carlettini
         </h1>
         
-        <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-2xl mb-8">
+        <p className="text-lg md:text-xl lg:text-2xl text-foreground/80 leading-relaxed max-w-3xl mb-8">
           Professionista IT con esperienza nella gestione di sistemi informativi e automazione industriale.
           Specializzato in soluzioni tecnologiche e sistemi di visione.
         </p>
@@ -39,10 +39,10 @@ const ProfileSection = () => {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
-        className="md:w-1/2 flex justify-center"
+        className="md:w-1/2 lg:w-3/5 flex justify-center"
       >
         <div className="relative">
-          <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-2xl">
+          <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[450px] xl:h-[450px] rounded-full overflow-hidden border-4 border-white shadow-2xl">
             <img 
               src="/lovable-uploads/f79fbadc-e1b7-4238-8399-6c72efedd5cb.png" 
               alt="Enzo Carlettini" 

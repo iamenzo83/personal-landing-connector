@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 
 type Experience = {
@@ -36,8 +37,8 @@ const experiences: Experience[] = [
 
 const ExperienceSection = () => {
   return (
-    <section id="experience" className="py-24 px-6">
-      <div className="max-w-7xl mx-auto">
+    <section id="experience" className="py-24 px-6 md:px-12 lg:px-24 xl:px-32">
+      <div className="max-w-7xl xl:max-w-8xl 2xl:max-w-screen-2xl mx-auto">
         <div className="text-center mb-16">
           <motion.span
             initial={{ opacity: 0, y: -10 }}
@@ -54,7 +55,7 @@ const ExperienceSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-3xl md:text-4xl font-bold mt-4 mb-6"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4 mb-6"
           >
             Esperienza lavorativa
           </motion.h2>
@@ -64,7 +65,7 @@ const ExperienceSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg text-foreground/70 max-w-2xl mx-auto"
+            className="text-lg md:text-xl lg:text-2xl text-foreground/70 max-w-3xl mx-auto"
           >
             Un percorso di crescita attraverso diversi ruoli nel campo dell'IT management e dell'automazione industriale.
           </motion.p>
@@ -73,7 +74,7 @@ const ExperienceSection = () => {
         <div className="relative">
           <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-border"></div>
           
-          <div className="space-y-12">
+          <div className="space-y-12 lg:space-y-16">
             {experiences.map((exp, index) => (
               <motion.div 
                 key={index}
@@ -88,11 +89,11 @@ const ExperienceSection = () => {
                 </div>
                 
                 <div className={`w-full md:w-[calc(50%-2rem)] ${index % 2 === 0 ? 'md:pr-0 md:pl-8 text-left' : 'md:pl-0 md:pr-8 md:text-right'} ml-12 md:ml-0`}>
-                  <div className="bg-white dark:bg-secondary/20 rounded-2xl shadow-sm border border-border/40 p-6 hover:shadow-md transition-apple">
+                  <div className="bg-white dark:bg-secondary/20 rounded-2xl shadow-sm border border-border/40 p-6 lg:p-8 hover:shadow-md transition-apple">
                     <span className="inline-block text-sm font-medium text-primary/80 mb-2">{exp.period}</span>
-                    <h3 className="text-xl font-semibold">{exp.company}</h3>
-                    <h4 className="text-foreground/70 mb-3">{exp.position}</h4>
-                    <p className="text-foreground/80">{exp.description}</p>
+                    <h3 className="text-xl lg:text-2xl font-semibold">{exp.company}</h3>
+                    <h4 className="text-foreground/70 text-lg mb-3">{exp.position}</h4>
+                    <p className="text-foreground/80 text-base lg:text-lg">{exp.description}</p>
                   </div>
                 </div>
               </motion.div>

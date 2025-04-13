@@ -3,10 +3,12 @@ import { useState, useEffect } from 'react';
 import { cn } from "@/lib/utils";
 import { useNavigate } from 'react-router-dom';
 import { ThemeToggle } from './ThemeToggle';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
+  const isMobile = useIsMobile();
   
   useEffect(() => {
     const handleScroll = () => {
@@ -44,23 +46,23 @@ const Header = () => {
   return (
     <header 
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 px-6 py-4 transition-apple",
+        "fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 py-4 transition-apple",
         scrolled ? "blur-backdrop shadow-sm" : "bg-transparent"
       )}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+      <div className="max-w-7xl xl:max-w-8xl 2xl:max-w-screen-2xl mx-auto flex items-center justify-between">
         <div className="animate-fade-in-down">
           <a 
             href="/"
             onClick={handleHomeClick}
-            className="text-lg font-medium tracking-tight opacity-90 hover:opacity-100 transition-apple"
+            className="text-lg md:text-xl font-medium tracking-tight opacity-90 hover:opacity-100 transition-apple"
           >
             Enzo Carlettini
           </a>
         </div>
         
-        <div className="flex items-center space-x-4 animate-fade-in-down">
-          <nav className="hidden md:flex items-center space-x-4 mr-4">
+        <div className="flex items-center space-x-2 md:space-x-4 animate-fade-in-down">
+          <nav className="hidden md:flex items-center space-x-2 lg:space-x-4">
             <a 
               href="/#skills" 
               onClick={handleSkillsClick}
