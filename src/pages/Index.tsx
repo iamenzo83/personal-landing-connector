@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import ProfileSection from "@/components/ProfileSection";
+import ContactForm from "@/components/ContactForm";
 import SectionMenu from "@/components/SectionMenu";
 import ContactButton from "@/components/ContactButton";
 
@@ -59,56 +60,9 @@ const Index = () => {
       <main>
         <ProfileSection />
         
-        {/* Contact Buttons Section - Sotto la foto */}
+        {/* Contact Form Section - Sotto la foto */}
         <section className="py-16 px-6 bg-gradient-to-b from-background to-secondary/10">
-          <div className="max-w-7xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="mb-8"
-            >
-              <span className="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full">
-                Contattami
-              </span>
-              <h3 className="text-2xl md:text-3xl font-semibold mt-4 mb-4">
-                Parliamo del tuo progetto
-              </h3>
-              <p className="text-foreground/70 max-w-2xl mx-auto">
-                Scegli il canale che preferisci per metterti in contatto
-              </p>
-            </motion.div>
-            
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
-            >
-              <ContactButton 
-                type="mail" 
-                href="mailto:enzo@carlettini.org" 
-                className="w-full sm:w-auto"
-              />
-              <ContactButton 
-                type="telegram" 
-                href="https://t.me/sharpec" 
-                className="w-full sm:w-auto"
-              />
-              <ContactButton 
-                type="whatsapp" 
-                href="https://wa.me/393272408379" 
-                className="w-full sm:w-auto"
-              />
-              <ContactButton 
-                type="linkedin" 
-                href="https://www.linkedin.com/in/enzocarlettini/" 
-                className="w-full sm:w-auto"
-              />
-            </motion.div>
-          </div>
+          <ContactForm />
         </section>
         
         {/* Menu Sections - Competenze e Esperienze */}
@@ -157,7 +111,52 @@ const Index = () => {
           </div>
         </section>
         
-        {/* Footer Contact Section rimossa - già presente sopra */}
+        {/* Footer Contact Section */}
+        <section id="contact" className="py-16 px-6 bg-gradient-to-b from-background to-secondary/30">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="mb-8"
+            >
+              <h3 className="text-2xl font-semibold mb-4">Altri canali di contatto</h3>
+              <p className="text-foreground/70 mb-6">
+                Scegli il canale che preferisci per metterti in contatto
+              </p>
+            </motion.div>
+            
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
+            >
+              <ContactButton 
+                type="mail" 
+                href="mailto:enzo@carlettini.org" 
+                className="w-full sm:w-auto"
+              />
+              <ContactButton 
+                type="telegram" 
+                href="https://t.me/sharpec" 
+                className="w-full sm:w-auto"
+              />
+              <ContactButton 
+                type="whatsapp" 
+                href="https://wa.me/393272408379" 
+                className="w-full sm:w-auto"
+              />
+              <ContactButton 
+                type="linkedin" 
+                href="https://www.linkedin.com/in/enzocarlettini/" 
+                className="w-full sm:w-auto"
+              />
+            </motion.div>
+          </div>
+        </section>
       </main>
       
       <footer className="py-8 px-6 bg-secondary">
