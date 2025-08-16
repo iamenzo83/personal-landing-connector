@@ -45,8 +45,8 @@ const ProfileSection = () => {
           <div className="relative w-fit h-fit">
             <div className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[400px] xl:h-[400px] 2xl:w-[450px] 2xl:h-[450px] rounded-full overflow-hidden border-4 border-white shadow-2xl">
               <img 
-                src="/lovable-uploads/f79fbadc-e1b7-4238-8399-6c72efedd5cb.png" 
-                alt="Enzo Carlettini" 
+                src="/lovable-uploads/e0d2e28c-003e-4841-a066-7d7c8c46307f.png" 
+                alt="Enzo Carlettini"
                 className="w-full h-full object-cover avatar-clip-path"
                 loading="lazy"
               />
